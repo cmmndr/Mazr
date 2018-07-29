@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/towerDefense_tilesheet@2.png" type="Texture" id=1]
+
+[node name="tileset_td" type="Node2D"]
+
+position = Vector2( 410.837, 310.904 )
+
+[node name="walkable" type="Sprite" parent="." index="0"]
+
+position = Vector2( -314.837, -214.904 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 64, 64, 64 )
+_sections_unfolded = [ "Region" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="walkable" index="0"]
+
+navpoly = null
+enabled = true
+
+[node name="buildable" type="Sprite" parent="." index="1"]
+
+position = Vector2( -186.837, -214.904 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 320, 384, 64, 64 )
+_sections_unfolded = [ "Region", "Transform" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="buildable" index="0"]
+
+navpoly = null
+enabled = true
+
+[node name="spawn" type="Sprite" parent="." index="2"]
+
+position = Vector2( -58.8372, -214.904 )
+z_index = -1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1056, 288, 64, 64 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform", "Z Index" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="spawn" index="0"]
+
+navpoly = null
+enabled = true
+
+[node name="base" type="Sprite" parent="." index="3"]
+
+position = Vector2( 69.1628, -214.904 )
+z_index = -1
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 1696, 288, 64, 64 )
+_sections_unfolded = [ "Region", "Transform", "Z Index" ]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="base" index="0"]
+
+navpoly = null
+enabled = true
+
+
